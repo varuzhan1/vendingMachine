@@ -14,8 +14,6 @@ public class Main {
     private static Vending vending = new VendingImpl(config.getItems());
     private static registerCash.api.RegisterCash registerCash = new RegisterCashImpl(config.getCoin());
 
-
-
     public static void main(String[] args) {
 
         boolean isRun = true;

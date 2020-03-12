@@ -10,13 +10,7 @@ import java.util.List;
 
 public class VendingImpl implements Vending {
 
-    private Config config;
     private List<Item> items;
-
-    public VendingImpl( ) {
-        this.config = new Config();
-        this.items = config.getItems();
-    }
 
     public VendingImpl( List<Item> items) {
         this.items = items;
@@ -29,7 +23,6 @@ public class VendingImpl implements Vending {
     public void setItems(List<Item> items) {
         this.items = items;
     }
-
     @Override
     public void printItem() {
         for (int i = 0; i < items.size(); i++) {

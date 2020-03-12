@@ -22,13 +22,7 @@ public class RegisterCashImpl implements RegisterCash {
         balance = 0;
     }
 
-    public Config getConfig() {
-        return config;
-    }
 
-    public void setConfig(Config config) {
-        this.config = config;
-    }
 
     public List<Integer> getCoins() {
         return coins;
