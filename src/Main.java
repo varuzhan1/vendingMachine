@@ -1,3 +1,4 @@
+import config.Config;
 import exception.CoinIsNotValidException;
 import exception.InsertedMoneyNotEnoughException;
 import exception.ItemNotFoundException;
@@ -8,9 +9,12 @@ import vending.impl.VendingImpl;
 
 public class Main {
 
+    private static Config config = new Config();
     private static Scanner scanner = new Scanner(System.in);
-    private static Vending vending = new VendingImpl();
-    private static registerCash.api.RegisterCash registerCash = new RegisterCashImpl();
+    private static Vending vending = new VendingImpl(config.getItems());
+    private static registerCash.api.RegisterCash registerCash = new RegisterCashImpl(config.getCoin());
+
+
 
     public static void main(String[] args) {
 

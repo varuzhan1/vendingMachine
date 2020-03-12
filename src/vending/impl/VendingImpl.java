@@ -14,9 +14,20 @@ public class VendingImpl implements Vending {
     private List<Item> items;
 
     public VendingImpl( ) {
-
         this.config = new Config();
         this.items = config.getItems();
+    }
+
+    public VendingImpl( List<Item> items) {
+        this.items = items;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     @Override
@@ -48,6 +59,5 @@ public class VendingImpl implements Vending {
             }
         }
         throw new ItemNotFoundException("Product not found");
-
     }
 }

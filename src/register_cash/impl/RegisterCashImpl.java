@@ -8,22 +8,34 @@ import java.util.List;
 
 public class RegisterCashImpl implements RegisterCash {
 
-    private Integer balance;
+    private Integer balance = 0;
     private Config config;
     private List<Integer> coins;
 
-
-    public RegisterCashImpl() {
-        this.balance = 0;
-        this.config = new Config();
-        this.coins = config.getCoin();
-        ;
+    public RegisterCashImpl(List<Integer> coins) {
+        this.coins = coins;
     }
 
     @Override
     public void takeYourChange() {
         System.out.println("Take your change- " + balance);
         balance = 0;
+    }
+
+    public Config getConfig() {
+        return config;
+    }
+
+    public void setConfig(Config config) {
+        this.config = config;
+    }
+
+    public List<Integer> getCoins() {
+        return coins;
+    }
+
+    public void setCoins(List<Integer> coins) {
+        this.coins = coins;
     }
 
     @Override
